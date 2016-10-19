@@ -1,0 +1,14 @@
+<ion-view id="weather-container">
+    <ion-content>
+        <ion-refresher pulling-text="Pull to refresh..." on-refresh="WeatherVm.doRefresh()">
+        </ion-refresher>
+        <div id="current-weather" ng-show="WeatherVm.haveData">
+            <h1 class="current-temp">{{WeatherVm.temperature.current}}&deg;</h1>
+            <h1>{{WeatherVm.current.summary}}</h1>
+            <h2>
+                <span id="temp-hi"><i class="icon ion-arrow-up-c"></i> {{WeatherVm.temperature.high}}&deg;</span>
+                <span id="temp-low"><i class="icon ion-arrow-down-c"></i> {{WeatherVm.temperature.low}}&deg;</span>
+            </h2>
+        </div>
+    </ion-content>
+</ion-view>
